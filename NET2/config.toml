@@ -1,0 +1,24 @@
+host1_port = 114
+host1_name = "服务器"
+
+host2_port = 514
+host2_name = "客户端"
+
+host3_port = 1919
+host3_name = "服务器"
+
+host4_port = 810
+host4_name = "客户端"
+
+[GBN]
+window_size = 5
+identi_size = 1024
+timeout = 5
+loss = 0.1
+
+[SR]
+window_size = 5
+identi_size = 10
+timeout = 2
+host1_loss = 0.1
+host2_loss = 0.1

@@ -1,0 +1,17 @@
+# 排除压缩包
+*.zip
+*.rar
+
+# 排除实验报告
+*.doc
+*.docx
+*.tex
+*.pdf
+
+# 排除编译结果
+*.class
+
+# 排除临时文件
+__pycache__
+*.pyc
+*.mycache
