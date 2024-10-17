@@ -23,7 +23,7 @@ public class SocketServer {
     redirectAddrMap.put("jwts.hit.edu.cn", "http://jwes.hit.edu.cn/");
     redirectHostMap.put("jwts.hit.edu.cn", "jwes.hit.edu.cn");
 
-    //  forbidHost.add("today.hit.edu.cn");
+     forbidHost.add("today.hit.edu.cn");
     //  forbidUser.add("127.0.0.1");
   }
 
