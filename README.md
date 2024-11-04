@@ -127,7 +127,7 @@ import time
 设置好共享文件夹后需要运行如下指令**将其挂载到虚拟机文件系统下面**：
 
 ```bash
-vmhgfs-fuse ./host: /mnt/hgfs
+vmhgfs-fuse .host:/ /mnt/hgfs
 ```
 
 然后可以使用 cd 命令进入挂载的共享文件夹，例如我们将文件夹 `Machine 1` 挂在给了某台虚拟机，就可以在终端里执行以下指令：
