@@ -7,6 +7,7 @@
 *.docx
 *.tex
 *.pdf
+submit
 
 # 排除编译结果
 *.class

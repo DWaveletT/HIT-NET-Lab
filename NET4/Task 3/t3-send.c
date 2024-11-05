@@ -51,6 +51,9 @@ unsigned short checksum(void *b, int len){
 /*
 以太网帧：以太网头 + IP 头 + UDP 头 + 载荷（信息）。
 构建 socket 地址结告诉操作系统，此次 Socket 通信将会通过 ens33 网口发送往指定 MAC 地址，传输的层次为数据链路层使用以太网协议。
+
+vmhgfs-fuse .host:/ /mnt/hgfs; cd "/mnt/hgfs/Machine 1"
+gcc t2-route.c;./a.out
 */
 
 int main(){
