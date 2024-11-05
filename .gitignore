@@ -3,10 +3,6 @@
 *.rar
 
 # 排除实验报告
-*.doc
-*.docx
-*.tex
-*.pdf
 submit
 
 # 排除编译结果

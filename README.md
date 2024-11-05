@@ -112,7 +112,9 @@ import time
 
 又臭又长的实验，写实验报告写的人生无可恋。
 
-不想多说话了。内容都在 NET3 文件夹下的 report.md 里面，使用时可以拿 pandoc 编译成 word 文档然后手动改下样式放进实验报告。
+不想多说话了。内容都在 NET3 文件夹下的 report.md 里面，使用时可以拿 pandoc 转换成 word 文档然后手动改下样式放进实验报告。文件夹下面放了一个用 pandoc 转换好的 word 文档，方便不想装 pandoc 的同学直接用。
+
+gen-images 文件夹下是我拿 tex 生成的 udp 和 arp 报文结构图。编译需要一个支持 ctex 和 tikz 的 LaTeX 环境。
 
 因为 QQ 更新成了 QQnt，似乎不再是 UDP 协议了，所以 UDP 协议分析那一段用的学长的图片，[感谢学长](https://github.com/HIT-SCIR-chichi/hit_computer_network)。
 

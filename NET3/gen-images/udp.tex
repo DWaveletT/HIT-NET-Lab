@@ -1,0 +1,39 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{ctex}
+
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[
+    scale = 0.6,
+    des/.style = {
+        align = center
+    },
+    >=Stealth
+]
+    
+    \draw[very thick] (0, 0) rectangle (16, 2);
+
+    \draw (0, 0) rectangle ++(4, 2);
+    \draw (4, 0) rectangle ++(4, 2);
+    \draw (8, 0) rectangle ++(4, 2);
+    \draw (12, 0) rectangle ++(4, 2);
+
+    \node[des] at(2, 1) {发送端口号};
+    \node[des] at(6, 1) {目的端口号};
+    \node[des] at(10, 1) {UDP 长度};
+    \node[des] at(14, 1) {UDP 校验和};
+
+    \node at(2, -0.5) {2B};
+    \node at(6, -0.5) {2B};
+    \node at(10, -0.5) {2B};
+    \node at(14, -0.5) {2B};
+
+    \draw[very thick] ( 0, 0) -- ++(0, -2);
+    \draw[very thick] (16, 0) -- ++(0, -2);
+
+    \node (des) at(8, -1.5) {8 字节 UDP 报文};
+    \draw[thick, ->] (des) -- ( 0, -1.5);
+    \draw[thick, ->] (des) -- (16, -1.5);
+
+\end{tikzpicture}
+\end{document}

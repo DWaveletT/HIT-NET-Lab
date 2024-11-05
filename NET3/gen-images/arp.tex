@@ -1,0 +1,56 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{ctex}
+
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[
+    scale = 0.6,
+    des/.style = {
+        align = center
+    },
+    >=Stealth
+]
+    
+    \draw[very thick] (0, 0) rectangle (28, 2);
+
+    \draw (0, 0) rectangle ++(2, 2);  % 硬件类型
+    \draw (2, 0) rectangle ++(2, 2);  % 协议类型
+    \draw (4, 0) rectangle ++(1, 2);  % 硬件地址长度
+    \draw (5, 0) rectangle ++(1, 2);  % 协议地址长度
+    \draw (6, 0) rectangle ++(2, 2);  % OP
+    \draw ( 8, 0) rectangle ++(6, 2);  % 发送端 MAC 地址
+    \draw (14, 0) rectangle ++(4, 2);  % 发送端  IP 地址
+    \draw (18, 0) rectangle ++(6, 2);  % 目的端 MAC 地址
+    \draw (24, 0) rectangle ++(4, 2);  % 目的端  IP 地址
+
+    \node[des] at(1, 1) {硬件 \\ 类型};
+    \node[des] at(3, 1) {协议 \\ 类型};
+
+    \draw[->] (4.5, 2) -- ++(0, 2) -- ++(4, 0) node[anchor = west] {硬件地址长度};
+    \draw[->] (5.5, 2) -- ++(0, 1) -- ++(3, 0) node[anchor = west] {协议地址长度};
+    
+    \node[des] at(7, 1) {OP};
+    \node[des] at(11, 1) {发送端 \\ MAC 地址};
+    \node[des] at(16, 1) {发送端 \\ IP 地址};
+    \node[des] at(21, 1) {目的端 \\ MAC 地址};
+    \node[des] at(26, 1) {目的端 \\ IP 地址};
+
+    \node at(1, -0.5) {2B};
+    \node at(3, -0.5) {2B};
+    \node at(4.5, -0.5) {1B};
+    \node at(5.5, -0.5) {1B};
+    \node at(7, -0.5) {2B};
+    \node at(11, -0.5) {6B};
+    \node at(16, -0.5) {4B};
+    \node at(21, -0.5) {6B};
+    \node at(26, -0.5) {4B};
+
+    \draw[very thick] ( 0, 0) -- ++(0, -2);
+    \draw[very thick] (28, 0) -- ++(0, -2);
+
+    \node (des) at(13, -1.5) {28 字节 ARP 请求/应答};
+    \draw[thick, ->] (des) -- ( 0, -1.5);
+    \draw[thick, ->] (des) -- (28, -1.5);
+
+\end{tikzpicture}
+\end{document}
